@@ -1,9 +1,14 @@
 package org.coolCompany.model;
 
-import java.util.List;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
+import java.util.List;
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class FlightSchedule {
+    @JsonProperty("CrewMembers")
     private List<CrewMember> crewMembers;
+    @JsonProperty("Flights")
     private List<Flight> flights;
 
     public FlightSchedule(List<CrewMember> crewMembers, List<Flight> flights) {

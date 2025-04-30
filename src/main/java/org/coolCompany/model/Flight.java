@@ -1,17 +1,21 @@
 package org.coolCompany.model;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 
 import java.util.List;
 import java.time.LocalDateTime;
 import java.lang.String;
-
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Flight {
     private String aircraftType; // тип воздушного судна
     private String aircraftNumber; // номер воздушного судна
     private String departureAirport; // название аэропорта вылета
     private String arrivalAirport; // название аэропорта назначения
+    @JsonFormat(pattern = "dd.MM.yyyy HH:mm")
     private LocalDateTime departureTime; // время взлета
+    @JsonFormat(pattern = "dd.MM.yyyy HH:mm")
     private LocalDateTime arrivalTime; // время посадки
     private List<Integer> crewIds; // список экипажа, выполнявшего перелет.
 
