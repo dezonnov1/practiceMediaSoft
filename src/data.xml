@@ -1,0 +1,146 @@
+<Data>
+    <CrewMembers>
+        <CrewMember id="1" firstName="Валерий" lastName="Жмышенко"/>
+        <CrewMember id="2" firstName="Анна" lastName="Петрова"/>
+        <CrewMember id="3" firstName="Игорь" lastName="Сидоров"/>
+        <CrewMember id="4" firstName="Мария" lastName="Кузнецова"/>
+        <CrewMember id="5" firstName="Алексей" lastName="Иванов"/>
+        <CrewMember id="6" firstName="Екатерина" lastName="Смирнова"/>
+        <CrewMember id="7" firstName="Сергей" lastName="Фёдоров"/>
+        <CrewMember id="8" firstName="Ольга" lastName="Новикова"/>
+        <CrewMember id="9" firstName="Дмитрий" lastName="Алексеев"/>
+        <CrewMember id="10" firstName="Наталья" lastName="Морозова"/>
+    </CrewMembers>
+    <Flights>
+        <Flight>
+            <AircraftType>Passenger Airliner</AircraftType>
+            <AircraftNumber>RA-73030</AircraftNumber>
+            <DepartureTime>30.12.2025 21:59</DepartureTime>
+            <ArrivalTime>30.12.2025 23:59</ArrivalTime>
+            <DepartureAirport>Оренбург-Центральный</DepartureAirport>
+            <ArrivalAirport>Якутск</ArrivalAirport>
+            <CrewIds>
+                <CrewId>1</CrewId>
+                <CrewId>2</CrewId>
+                <CrewId>3</CrewId>
+            </CrewIds>
+        </Flight>
+        <Flight>
+            <AircraftType>Cargo Aircraft</AircraftType>
+            <AircraftNumber>RA-73031</AircraftNumber>
+            <DepartureTime>31.12.2025 06:00</DepartureTime>
+            <ArrivalTime>31.12.2025 09:30</ArrivalTime>
+            <DepartureAirport>Москва-Шереметьево</DepartureAirport>
+            <ArrivalAirport>Екатеринбург</ArrivalAirport>
+            <CrewIds>
+                <CrewId>4</CrewId>
+                <CrewId>5</CrewId>
+                <CrewId>6</CrewId>
+            </CrewIds>
+        </Flight>
+        <Flight>
+            <AircraftType>Passenger Airliner</AircraftType>
+            <AircraftNumber>RA-73032</AircraftNumber>
+            <DepartureTime>01.01.2026 12:15</DepartureTime>
+            <ArrivalTime>01.01.2026 14:45</ArrivalTime>
+            <DepartureAirport>Новосибирск</DepartureAirport>
+            <ArrivalAirport>Красноярск</ArrivalAirport>
+            <CrewIds>
+                <CrewId>7</CrewId>
+                <CrewId>8</CrewId>
+                <CrewId>9</CrewId>
+            </CrewIds>
+        </Flight>
+        <Flight>
+            <AircraftType>Regional Jet</AircraftType>
+            <AircraftNumber>RA-73033</AircraftNumber>
+            <DepartureTime>02.01.2026 08:00</DepartureTime>
+            <ArrivalTime>02.01.2026 10:10</ArrivalTime>
+            <DepartureAirport>Сочи</DepartureAirport>
+            <ArrivalAirport>Казань</ArrivalAirport>
+            <CrewIds>
+                <CrewId>10</CrewId>
+                <CrewId>1</CrewId>
+                <CrewId>2</CrewId>
+            </CrewIds>
+        </Flight>
+        <Flight>
+            <AircraftType>Passenger Airliner</AircraftType>
+            <AircraftNumber>RA-73034</AircraftNumber>
+            <DepartureTime>03.01.2026 15:30</DepartureTime>
+            <ArrivalTime>03.01.2026 19:00</ArrivalTime>
+            <DepartureAirport>Самара</DepartureAirport>
+            <ArrivalAirport>Владивосток</ArrivalAirport>
+            <CrewIds>
+                <CrewId>3</CrewId>
+                <CrewId>4</CrewId>
+                <CrewId>5</CrewId>
+            </CrewIds>
+        </Flight>
+        <Flight>
+            <AircraftType>Cargo Aircraft</AircraftType>
+            <AircraftNumber>RA-73035</AircraftNumber>
+            <DepartureTime>04.01.2026 02:00</DepartureTime>
+            <ArrivalTime>04.01.2026 06:30</ArrivalTime>
+            <DepartureAirport>Иркутск</DepartureAirport>
+            <ArrivalAirport>Магадан</ArrivalAirport>
+            <CrewIds>
+                <CrewId>6</CrewId>
+                <CrewId>7</CrewId>
+                <CrewId>8</CrewId>
+            </CrewIds>
+        </Flight>
+        <Flight>
+            <AircraftType>Passenger Airliner</AircraftType>
+            <AircraftNumber>RA-73036</AircraftNumber>
+            <DepartureTime>05.01.2026 11:00</DepartureTime>
+            <ArrivalTime>05.01.2026 13:30</ArrivalTime>
+            <DepartureAirport>Уфа</DepartureAirport>
+            <ArrivalAirport>Омск</ArrivalAirport>
+            <CrewIds>
+                <CrewId>9</CrewId>
+                <CrewId>10</CrewId>
+                <CrewId>1</CrewId>
+            </CrewIds>
+        </Flight>
+        <Flight>
+            <AircraftType>Regional Jet</AircraftType>
+            <AircraftNumber>RA-73037</AircraftNumber>
+            <DepartureTime>06.01.2026 09:45</DepartureTime>
+            <ArrivalTime>06.01.2026 12:15</ArrivalTime>
+            <DepartureAirport>Архангельск</DepartureAirport>
+            <ArrivalAirport>Мурманск</ArrivalAirport>
+            <CrewIds>
+                <CrewId>2</CrewId>
+                <CrewId>3</CrewId>
+                <CrewId>4</CrewId>
+            </CrewIds>
+        </Flight>
+        <Flight>
+            <AircraftType>Passenger Airliner</AircraftType>
+            <AircraftNumber>RA-73038</AircraftNumber>
+            <DepartureTime>07.01.2026 17:20</DepartureTime>
+            <ArrivalTime>07.01.2026 20:40</ArrivalTime>
+            <DepartureAirport>Томск</DepartureAirport>
+            <ArrivalAirport>Петропавловск-Камчатский</ArrivalAirport>
+            <CrewIds>
+                <CrewId>5</CrewId>
+                <CrewId>6</CrewId>
+                <CrewId>7</CrewId>
+            </CrewIds>
+        </Flight>
+        <Flight>
+            <AircraftType>Cargo Aircraft</AircraftType>
+            <AircraftNumber>RA-73039</AircraftNumber>
+            <DepartureTime>08.01.2026 04:50</DepartureTime>
+            <ArrivalTime>08.01.2026 07:20</ArrivalTime>
+            <DepartureAirport>Челябинск</DepartureAirport>
+            <ArrivalAirport>Анадырь</ArrivalAirport>
+            <CrewIds>
+                <CrewId>8</CrewId>
+                <CrewId>9</CrewId>
+                <CrewId>10</CrewId>
+            </CrewIds>
+        </Flight>
+    </Flights>
+</Data>
