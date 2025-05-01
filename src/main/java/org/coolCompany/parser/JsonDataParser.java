@@ -12,13 +12,20 @@ import java.io.IOException;
 
 public class JsonDataParser implements DataParser{
     private final ObjectMapper mapper = new ObjectMapper();
-    @Override
-    public FlightSchedule parse(String filePath) throws IOException {
+
+    public JsonDataParser() {
         mapper.disable(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS);
         mapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
         mapper.registerModule(new JavaTimeModule());
+    }
+
+    @Override
+    public FlightSchedule parse(File file) throws Exception{
+        if (!file.isAbsolute()){
+            throw new IOException("File in not absolute!");
+        }
         try {
-            return mapper.readValue(new File(filePath), FlightSchedule.class);
+            return mapper.readValue(file, FlightSchedule.class);
         }
         catch (IOException e){
             throw new IOException(e);
@@ -26,4 +33,5 @@ public class JsonDataParser implements DataParser{
             throw new RuntimeException(e);
         }
     }
+
 }

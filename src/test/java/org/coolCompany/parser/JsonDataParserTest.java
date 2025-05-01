@@ -5,30 +5,19 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import java.net.URISyntaxException;
-import java.net.URL;
-import java.nio.file.Paths;
-
 public class JsonDataParserTest {
     private JsonDataParser parser;
-    private URL resource;
-    private String path;
+    private FlightSchedule schedule;
 
     @BeforeMethod
-    public void setup() throws URISyntaxException {
-        parser = new JsonDataParser();
+    public void setup() throws Exception {
         // Загружаем тестовый JSON из ресурсов
-        resource = getClass().getClassLoader().getResource("data.json");
-        assert resource != null : "test_schedule.json не найден!";
-        path = Paths.get(resource.toURI()).toString();
+        parser = new JsonDataParser();
+        schedule = parser.parse(DataParser.getFileFromJarRes("testData.json",JsonDataParserTest.class));
     }
 
     @Test
     public void testParseValidJson() throws Exception {
-        // Парсим файл
-        FlightSchedule schedule = new JsonDataParser().parse(path);
-
-        // Проверки
         Assert.assertNotNull(schedule);
         Assert.assertEquals(schedule.getCrewMembers().size(), 10);
         Assert.assertEquals(schedule.getFlights().size(), 10);
