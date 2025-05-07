@@ -15,7 +15,7 @@
     {
       "aircraftType": "Passenger Airliner",
       "aircraftNumber": "RA-73030",
-      "departureTime": "30.12.2025 21:59",
+      "departureTime": "30.12.2025 11:59",
       "arrivalTime": "30.12.2025 23:59",
       "departureAirport": "Оренбург-Центральный",
       "arrivalAirport": "Якутск",
@@ -28,7 +28,7 @@
       "arrivalTime": "31.12.2025 09:30",
       "departureAirport": "Москва-Шереметьево",
       "arrivalAirport": "Екатеринбург",
-      "crewIds": [4, 5, 6]
+      "crewIds": [1, 5, 6]
     },
     {
       "aircraftType": "Passenger Airliner",
@@ -46,7 +46,7 @@
       "arrivalTime": "02.01.2026 10:10",
       "departureAirport": "Сочи",
       "arrivalAirport": "Казань",
-      "crewIds": [10, 1, 2]
+      "crewIds": [10, 4, 2]
     },
     {
       "aircraftType": "Passenger Airliner",
@@ -73,7 +73,7 @@
       "arrivalTime": "05.01.2026 13:30",
       "departureAirport": "Уфа",
       "arrivalAirport": "Омск",
-      "crewIds": [9, 10, 1]
+      "crewIds": [9, 10, 4]
     },
     {
       "aircraftType": "Regional Jet",

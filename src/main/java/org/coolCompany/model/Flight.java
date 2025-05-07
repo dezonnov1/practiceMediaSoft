@@ -1,14 +1,15 @@
 package org.coolCompany.model;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlElementWrapper;
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 
 
 import java.util.List;
 import java.time.LocalDateTime;
 import java.lang.String;
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class Flight {
+public class Flight{
     private String aircraftType; // тип воздушного судна
     private String aircraftNumber; // номер воздушного судна
     private String departureAirport; // название аэропорта вылета
@@ -17,15 +18,27 @@ public class Flight {
     private LocalDateTime departureTime; // время взлета
     @JsonFormat(pattern = "dd.MM.yyyy HH:mm")
     private LocalDateTime arrivalTime; // время посадки
+    @JsonProperty("crewIds")
     private List<Integer> crewIds; // список экипажа, выполнявшего перелет.
-
-    public Flight(String aircraftType, String aircraftNumber, String departureAirport, String arrivalAirport, LocalDateTime departureTime, LocalDateTime arrivalTime, List<Integer> crewIds) {
+    @JsonCreator
+    public Flight(@JsonProperty("aircraftType") String aircraftType,
+                  @JsonProperty("aircraftNumber")String aircraftNumber,
+                  @JsonProperty("departureAirport")String departureAirport,
+                  @JsonProperty("arrivalAirport")String arrivalAirport,
+                  @JsonProperty("departureTime")LocalDateTime departureTime,
+                  @JsonProperty("arrivalTime")LocalDateTime arrivalTime,
+                  @JsonProperty("crewIds")List<Integer> crewIds) {
         this.aircraftType = aircraftType;
         this.aircraftNumber = aircraftNumber;
         this.departureAirport = departureAirport;
         this.arrivalAirport = arrivalAirport;
-        this.departureTime = departureTime;
-        this.arrivalTime = arrivalTime;
+        if (arrivalTime.isAfter(departureTime)){ // время посадки после взлета
+            this.departureTime = departureTime;
+            this.arrivalTime = arrivalTime;
+        }
+        else {
+            throw new IllegalArgumentException("Departure time before or equal arrival time");
+        }
         this.crewIds = crewIds;
     }
 
@@ -64,6 +77,15 @@ public class Flight {
         return departureTime;
     }
     public void setDepartureTime(LocalDateTime departureTime) {
+        if (this.arrivalTime.isAfter(departureTime)){ // время посадки после взлета
+            this.departureTime = departureTime;
+        }
+        else {
+            throw new IllegalArgumentException("Departure time before or equal arrival time");
+        }
+    }
+    @JsonSetter("departureTime")
+    public void setDepartureTimeUnSafe(LocalDateTime departureTime) {
         this.departureTime = departureTime;
     }
 
@@ -71,8 +93,18 @@ public class Flight {
         return arrivalTime;
     }
     public void setArrivalTime(LocalDateTime arrivalTime) {
+        if (arrivalTime.isAfter(this.departureTime)){ // время посадки после взлета
+            this.arrivalTime = arrivalTime;
+        }
+        else {
+            throw new IllegalArgumentException("Departure time before or equal arrival time");
+        }
+    }
+    @JsonSetter("arrivalTime")
+    public void setArrivalTimeUnSafe(LocalDateTime arrivalTime) {
         this.arrivalTime = arrivalTime;
     }
+
 
     public List<Integer> getCrewIds() {
         return crewIds;

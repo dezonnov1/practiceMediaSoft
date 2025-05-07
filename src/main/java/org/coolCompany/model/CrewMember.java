@@ -2,9 +2,9 @@ package org.coolCompany.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
-import java.util.List;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class CrewMember {
+
     private Integer id;
     private String firstName; // имя специалиста
     private String lastName; // фамилия специалиста

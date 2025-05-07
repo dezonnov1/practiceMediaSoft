@@ -25,7 +25,7 @@ public class JacksonTest {
     public void setup() throws URISyntaxException {
         // Загружаем тестовый JSON из ресурсов
         resource = getClass().getClassLoader().getResource("data.json");
-        assert resource != null : "test_schedule.json не найден!";
+        assert resource != null : "testData.json не найден!";
         path = Paths.get(resource.toURI()).toString();
     }
     @Test(enabled = false)
