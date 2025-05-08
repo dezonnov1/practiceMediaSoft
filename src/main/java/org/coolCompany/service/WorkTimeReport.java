@@ -4,7 +4,6 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 
 public class WorkTimeReport {
-    @JacksonXmlProperty(localName = "totalHours")
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "0.00")
     private double totalHours; // всего часов в месяце
     private boolean exceedsMonthlyLimit; // в данном месяце суммарное рабочее время > 80 часов
@@ -15,7 +14,12 @@ public class WorkTimeReport {
         return totalHours;
     }
     public void setTotalHours(double totalHours) {
-        this.totalHours = totalHours;
+        if (totalHours > 0){
+            this.totalHours = totalHours;
+        }
+        else {
+            throw new IllegalArgumentException("Рабочее время не может быть отрицательным!");
+        }
     }
 
     public boolean isExceedsMonthlyLimit() {

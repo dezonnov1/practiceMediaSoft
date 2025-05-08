@@ -6,7 +6,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import java.io.File;
-@Test(enabled = false)
+@Test(enabled = true)
 public class JsonDataParserTest {
     private JsonDataParser parser;
     private FlightSchedule schedule;
@@ -16,7 +16,8 @@ public class JsonDataParserTest {
     public void setup() throws Exception {
         // Загружаем тестовый JSON из ресурсов
         parser = new JsonDataParser();
-        schedule = parser.parse(new File(JsonDataParserTest.class.getClassLoader().getResource(filename).toString()));
+        File file = new File(JsonDataParserTest.class.getClassLoader().getResource(filename).toURI());
+        schedule = parser.parse(file);
     }
 
     @Test

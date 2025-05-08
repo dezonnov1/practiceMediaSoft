@@ -33,14 +33,18 @@ public class WorkTimeCalculator {
         // Map<CrewMemberId, Map<MonthYear, WorkTimeReport>>
         Map<Integer, Map<String, WorkTimeReport>> result  = new HashMap<>();
         if (schedule == null) {
-            throw new IllegalArgumentException("FlightSchedule cannot be null");
+            throw new IllegalArgumentException("FlightSchedule не должен быть null");
         }
         List<CrewMember> crewList = schedule.getCrewMembers();
         List<Flight> flightList = schedule.getFlights();
         if (flightList == null) {
-            throw new IllegalArgumentException("Flight list cannot be null");
+            throw new IllegalArgumentException("Flight list не должен быть null");
         }
         // !!! добавить проверку наличия crewIds из Flight в CrewMembers
+
+
+
+
 
 
         // до сюда проверка

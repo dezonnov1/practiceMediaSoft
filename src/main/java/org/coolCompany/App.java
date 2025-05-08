@@ -7,9 +7,7 @@ import org.coolCompany.service.WorkTimeCalculator;
 import org.coolCompany.service.WorkTimeReport;
 import org.coolCompany.writer.DataWriter;
 
-import java.awt.*;
 import java.io.File;
-import java.io.IOException;
 import java.util.Locale;
 import java.util.Map;
 
@@ -20,7 +18,6 @@ public class App {
     public static final Locale APP_LOCALE = new Locale("ru", "RU");
 
     public static void main(String[] args) throws Exception{
-        printConfig();
         File inputFileDir = INPUT_DIR;
         File outputFileDir = OUTPUT_DIR;
 
@@ -30,9 +27,8 @@ public class App {
         if (!outputFileDir.exists()) {
             throw new RuntimeException("Не удалось создать директорию: " + outputFileDir);
         }
-        System.out.println("Absolute path: " + outputFileDir.getAbsolutePath());
-        System.out.println("input dir: " + inputFileDir.getAbsolutePath());
-        System.out.println("output dir: " + outputFileDir.getAbsolutePath());
+        System.out.println("папка для input: " + inputFileDir.getAbsolutePath());
+        System.out.println("папка для output: " + outputFileDir.getAbsolutePath());
 
         String inputFileName;
         String outputFileName;
@@ -90,7 +86,7 @@ public class App {
             else {
                 System.out.println("Файл не существует!");
             }
-            //можно, чтоб по окончанию записи открывало файл в заданном приложении по умолчанию
+            //окончанию записи файл откроется в приложении по умолчанию (рабочий)
 //            if (Desktop.isDesktopSupported()) {
 //                Desktop desktop = Desktop.getDesktop();
 //                try {

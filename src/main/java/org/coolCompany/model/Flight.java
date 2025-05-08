@@ -37,7 +37,7 @@ public class Flight{
             this.arrivalTime = arrivalTime;
         }
         else {
-            throw new IllegalArgumentException("Departure time before or equal arrival time");
+            throw new IllegalArgumentException("Departure time раньше или такой же, что и arrival time");
         }
         this.crewIds = crewIds;
     }
@@ -81,7 +81,7 @@ public class Flight{
             this.departureTime = departureTime;
         }
         else {
-            throw new IllegalArgumentException("Departure time before or equal arrival time");
+            throw new IllegalArgumentException("Departure time раньше или такой же, что и arrival time");
         }
     }
     @JsonSetter("departureTime")
@@ -97,7 +97,7 @@ public class Flight{
             this.arrivalTime = arrivalTime;
         }
         else {
-            throw new IllegalArgumentException("Departure time before or equal arrival time");
+            throw new IllegalArgumentException("Departure time раньше или такой же, что и arrival time");
         }
     }
     @JsonSetter("arrivalTime")

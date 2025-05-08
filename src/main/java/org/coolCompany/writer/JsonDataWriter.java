@@ -13,6 +13,7 @@ public class JsonDataWriter implements DataWriter {
     public void write(Map<Integer, Map<String, WorkTimeReport>> report, File outputFile) throws Exception {
         ObjectMapper mapper = new ObjectMapper();
         mapper.enable(SerializationFeature.INDENT_OUTPUT);
+        mapper.disable(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS);
         if (!outputFile.getParentFile().exists()) {
             boolean created = outputFile.mkdirs();
             if (!created) {

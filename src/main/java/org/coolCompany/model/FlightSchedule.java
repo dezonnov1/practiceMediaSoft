@@ -2,16 +2,13 @@ package org.coolCompany.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlElementWrapper;
 
 import java.util.List;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class FlightSchedule {
     @JsonProperty("CrewMembers")
-    @JacksonXmlElementWrapper(useWrapping = true)
     private List<CrewMember> crewMembers;
     @JsonProperty("Flights")
-    @JacksonXmlElementWrapper(useWrapping = true)
     private List<Flight> flights;
 
     public FlightSchedule(List<CrewMember> crewMembers, List<Flight> flights) {

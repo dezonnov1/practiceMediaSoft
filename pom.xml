@@ -50,11 +50,6 @@
             </plugin>
         </plugins>
     </build>
-
-
-
-
-
     <dependencies>
         <!--> json <-->
         <!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->
@@ -76,15 +71,6 @@
             <artifactId>jackson-annotations</artifactId>
             <version>2.19.0</version>
         </dependency>
-
-        <!--> xml <-->
-        <!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.dataformat/jackson-dataformat-xml -->
-        <dependency>
-            <groupId>com.fasterxml.jackson.dataformat</groupId>
-            <artifactId>jackson-dataformat-xml</artifactId>
-            <version>2.19.0</version>
-        </dependency>
-
         <!--> tests testng <-->
         <!-- https://mvnrepository.com/artifact/org.testng/testng -->
         <dependency>
