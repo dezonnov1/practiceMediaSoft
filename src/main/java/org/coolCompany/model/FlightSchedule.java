@@ -3,7 +3,6 @@ package org.coolCompany.model;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
 
@@ -21,7 +20,7 @@ public class FlightSchedule {
 
     public FlightSchedule() {
     }
-    public static void validateСrewMembers(List<CrewMember> crewMembers) throws IllegalArgumentException{
+    public static void validateCrewMembers(List<CrewMember> crewMembers) throws IllegalArgumentException{
         if (crewMembers == null) {
             throw new IllegalArgumentException("Crews не может быть null.");
         }
@@ -45,7 +44,7 @@ public class FlightSchedule {
         return crewMembers;
     }
     public void setCrewMembers(List<CrewMember> crewMembers) throws IllegalArgumentException {
-        validateСrewMembers(crewMembers);
+        validateCrewMembers(crewMembers);
         this.crewMembers = crewMembers;
     }
     public static boolean isValidFlights(List<Flight> flights) {

@@ -1,7 +1,6 @@
 package org.coolCompany;
 
 import java.io.File;
-import java.io.IOException;
 import java.time.format.DateTimeFormatter;
 import java.time.temporal.WeekFields;
 import java.util.Locale;

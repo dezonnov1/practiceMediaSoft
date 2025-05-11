@@ -1,6 +1,5 @@
 package org.coolCompany.factory;
 
-import org.coolCompany.parser.DataParser;
 import org.coolCompany.parser.JsonDataParser;
 import org.coolCompany.writer.DataWriter;
 import org.coolCompany.writer.JsonDataWriter;

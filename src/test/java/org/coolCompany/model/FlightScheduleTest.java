@@ -146,9 +146,9 @@ public class FlightScheduleTest{
     }
     //crewmembers
     @Test(dataProvider = "crewsCases")
-    public void testValidateСrewMembers(List<CrewMember> crewMembers, Exception expectedException) {
+    public void testValidateCrewMembers(List<CrewMember> crewMembers, Exception expectedException) {
         try {
-            FlightSchedule.validateСrewMembers(crewMembers);
+            FlightSchedule.validateCrewMembers(crewMembers);
             if (expectedException != null) {
                 fail("Ожидалось исключение: " + expectedException);
             }
@@ -162,8 +162,8 @@ public class FlightScheduleTest{
     }
 
     @Test(dataProvider = "crewsCases")
-    public void testIsValidСrewMembers(List<CrewMember> crewMembers, Exception expectedException) {
-        assertEquals(expectedException == null, FlightSchedule.isValidСrewMembers(crewMembers));
+    public void testIsValidCrewMembers(List<CrewMember> crewMembers, Exception expectedException) {
+        assertEquals(expectedException == null, FlightSchedule.isValidCrewMembers(crewMembers));
     }
 
     @Test(dataProvider = "crewsCases")

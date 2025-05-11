@@ -10,6 +10,6 @@ import java.util.Map;
 
 public interface DataWriter{
     public void write(Map<Integer, Map<String, WorkTimeReport>> report, File outputFile) throws Exception;
-    static void checkWriteInput(Map<Integer, Map<String, WorkTimeReport>> report, List<CrewMember> crews, File outputFile){
+    public static void checkWriteInput(Map<Integer, Map<String, WorkTimeReport>> report, List<CrewMember> crews, File outputFile){
     }
 }
