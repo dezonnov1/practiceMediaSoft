@@ -15,91 +15,91 @@
     {
       "aircraftType": "Passenger Airliner",
       "aircraftNumber": "RA-73030",
-      "departureTime": "30.12.2025 11:59",
-      "arrivalTime": "30.12.2025 23:59",
       "departureAirport": "Оренбург-Центральный",
       "arrivalAirport": "Якутск",
+      "departureTime": "30.12.2025 11:59",
+      "arrivalTime": "30.12.2025 23:59",
       "crewIds": [1, 2, 3]
     },
     {
       "aircraftType": "Cargo Aircraft",
       "aircraftNumber": "RA-73031",
-      "departureTime": "31.12.2025 06:00",
-      "arrivalTime": "31.12.2025 09:30",
       "departureAirport": "Москва-Шереметьево",
       "arrivalAirport": "Екатеринбург",
+      "departureTime": "31.12.2025 06:00",
+      "arrivalTime": "31.12.2025 09:30",
       "crewIds": [1, 5, 6]
     },
     {
       "aircraftType": "Passenger Airliner",
       "aircraftNumber": "RA-73032",
-      "departureTime": "01.01.2026 12:15",
-      "arrivalTime": "01.01.2026 14:45",
       "departureAirport": "Новосибирск",
       "arrivalAirport": "Красноярск",
+      "departureTime": "01.01.2026 12:15",
+      "arrivalTime": "01.01.2026 14:45",
       "crewIds": [7, 8, 9]
     },
     {
       "aircraftType": "Regional Jet",
       "aircraftNumber": "RA-73033",
-      "departureTime": "02.01.2026 08:00",
-      "arrivalTime": "02.01.2026 10:10",
       "departureAirport": "Сочи",
       "arrivalAirport": "Казань",
+      "departureTime": "02.01.2026 08:00",
+      "arrivalTime": "02.01.2026 10:10",
       "crewIds": [10, 4, 2]
     },
     {
       "aircraftType": "Passenger Airliner",
       "aircraftNumber": "RA-73034",
-      "departureTime": "03.01.2026 15:30",
-      "arrivalTime": "03.01.2026 19:00",
       "departureAirport": "Самара",
       "arrivalAirport": "Владивосток",
+      "departureTime": "03.01.2026 15:30",
+      "arrivalTime": "03.01.2026 19:00",
       "crewIds": [3, 4, 5]
     },
     {
       "aircraftType": "Cargo Aircraft",
       "aircraftNumber": "RA-73035",
-      "departureTime": "04.01.2026 02:00",
-      "arrivalTime": "04.01.2026 06:30",
       "departureAirport": "Иркутск",
       "arrivalAirport": "Магадан",
+      "departureTime": "04.01.2026 02:00",
+      "arrivalTime": "04.01.2026 06:30",
       "crewIds": [6, 7, 8]
     },
     {
       "aircraftType": "Passenger Airliner",
       "aircraftNumber": "RA-73036",
-      "departureTime": "05.01.2026 11:00",
-      "arrivalTime": "05.01.2026 13:30",
       "departureAirport": "Уфа",
       "arrivalAirport": "Омск",
+      "departureTime": "05.01.2026 11:00",
+      "arrivalTime": "05.01.2026 13:30",
       "crewIds": [9, 10, 4]
     },
     {
       "aircraftType": "Regional Jet",
       "aircraftNumber": "RA-73037",
-      "departureTime": "06.01.2026 09:45",
-      "arrivalTime": "06.01.2026 12:15",
       "departureAirport": "Архангельск",
       "arrivalAirport": "Мурманск",
+      "departureTime": "06.01.2026 09:45",
+      "arrivalTime": "06.01.2026 12:15",
       "crewIds": [2, 3, 4]
     },
     {
       "aircraftType": "Passenger Airliner",
       "aircraftNumber": "RA-73038",
-      "departureTime": "07.01.2026 17:20",
-      "arrivalTime": "07.01.2026 20:40",
       "departureAirport": "Томск",
       "arrivalAirport": "Петропавловск-Камчатский",
+      "departureTime": "07.01.2026 17:20",
+      "arrivalTime": "07.01.2026 20:40",
       "crewIds": [5, 6, 7]
     },
     {
       "aircraftType": "Cargo Aircraft",
       "aircraftNumber": "RA-73039",
-      "departureTime": "08.01.2026 04:50",
-      "arrivalTime": "08.01.2026 07:20",
       "departureAirport": "Челябинск",
       "arrivalAirport": "Анадырь",
+      "departureTime": "08.01.2026 04:50",
+      "arrivalTime": "08.01.2026 07:20",
       "crewIds": [8, 9, 10]
     }
   ]

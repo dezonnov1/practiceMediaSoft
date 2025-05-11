@@ -7,27 +7,29 @@ import org.coolCompany.writer.JsonDataWriter;
 
 public class DataIOFactory {
 
-    public static DataWriter createWriter(String outputFile) {
-        if (outputFile == null || outputFile.isEmpty()) {
-            throw new IllegalArgumentException("Входной файл не может быть пустым.");
+    public static void validateFileName(String name) throws IllegalArgumentException{
+        if (name == null) {
+            throw new IllegalArgumentException("Имя файла не может быть null.");
         }
-
+        if (name.trim().isEmpty()) {
+            throw new IllegalArgumentException("Имя файла не может быть пустым.");
+        }
+    }
+    public static DataWriter createWriter(String outputFile) throws UnsupportedOperationException, IllegalArgumentException{
+        validateFileName(outputFile);
         if (outputFile.endsWith(".json")) {
             return new JsonDataWriter();
         } else {
-            throw new UnsupportedOperationException("Неподдерживаемый формат для сериализации: " + outputFile);
+            throw new UnsupportedOperationException("Неподдерживаемый формат для сериализации.");
         }
     }
 
-    public static DataParser createParser(String inputFile) {
-        if (inputFile == null || inputFile.isEmpty()) {
-            throw new IllegalArgumentException("Входной файл не может быть пустым.");
-        }
-
+    public static DataParser createParser(String inputFile) throws UnsupportedOperationException, IllegalArgumentException{
+        validateFileName(inputFile);
         if (inputFile.endsWith(".json")) {
             return new JsonDataParser();
         } else {
-            throw new UnsupportedOperationException("Неподдерживаемый формат для парсинга: " + inputFile);
+            throw new UnsupportedOperationException("Неподдерживаемый формат для парсинга.");
         }
     }
 }

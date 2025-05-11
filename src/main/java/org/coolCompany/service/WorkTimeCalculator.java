@@ -9,10 +9,11 @@ import static org.coolCompany.AppConfig.WEEK_FIELDS;
 import java.time.Duration;
 import java.time.LocalDate;
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class WorkTimeCalculator {
 
-    public static Map<Integer,Map<Integer, Map<Integer, List<Flight>>>> groupByMonthAndWeek(List<Flight> flights) {
+    static public Map<Integer,Map<Integer, Map<Integer, List<Flight>>>> groupByMonthAndWeek(List<Flight> flights) {
         //Map<Year, Map<Month,Map<numWeekInMonth, List<Flight>>>>
         //группировка по году - месяцу - недели в месяце
         Map<Integer, Map<Integer, Map<Integer, List<Flight>>>> result = new HashMap<>();
@@ -24,30 +25,61 @@ public class WorkTimeCalculator {
         }
         return result;
     }
-    /**
-     * Возвращает
-     * @param schedule
-     * @return Map (Integer, Map(String, WorkTimeReport)) = Map (CrewMemberId, Map(MonthYear, WorkTimeReport))
-     */
-    static public Map<Integer, Map<String, WorkTimeReport>> calculateWorkTime(FlightSchedule schedule) {
-        // Map<CrewMemberId, Map<MonthYear, WorkTimeReport>>
-        Map<Integer, Map<String, WorkTimeReport>> result  = new HashMap<>();
+    static public void checkOnValidFlightSchedule(FlightSchedule schedule) throws IllegalArgumentException{
         if (schedule == null) {
             throw new IllegalArgumentException("FlightSchedule не должен быть null");
         }
+
+        List<CrewMember> crewMembers = schedule.getCrewMembers();
+        List<Flight> flights = schedule.getFlights();
+
+        // Проверка: у всех crew есть id
+        for (CrewMember member : crewMembers) {
+            if (member == null || member.getId() == null) {
+                throw new IllegalArgumentException("FlightSchedule crewMembers пуст или не имеет id.");
+            }
+        }
+
+        // Получаем множество всех допустимых ID экипажа
+        Set<Integer> validCrewIds = crewMembers.stream()
+                .map(CrewMember::getId)
+                .collect(Collectors.toSet());
+
+        for (Flight flight : flights) {
+            if (flight == null) {
+                throw new IllegalArgumentException("Flight пустой.");
+            }
+
+            // Проверка: вылет раньше посадки
+            if (flight.getDepartureTime() == null || flight.getArrivalTime() == null ||
+                    !flight.getDepartureTime().isBefore(flight.getArrivalTime())) {
+                throw new IllegalArgumentException("DepartureTime после arrivalTime.");
+            }
+
+            // Проверка: все ID экипажа существуют
+            if (flight.getCrewIds() != null) {
+                for (Integer id : flight.getCrewIds()) {
+                    if (!validCrewIds.contains(id)) {
+                        throw new IllegalArgumentException("В Flight несуществующий crew ID: " + id);
+                    }
+                }
+            } else {
+                throw new IllegalArgumentException("Flight has null crewIds list.");
+            }
+        }
+    }
+    static public Map<Integer, Map<String, WorkTimeReport>> calculateWorkTime(FlightSchedule schedule) {
+        try{
+            checkOnValidFlightSchedule(schedule);
+        }
+        catch (Exception e){
+            System.out.println(e);
+        }
+        // Map<CrewMemberId, Map<MonthYear, WorkTimeReport>>
+        Map<Integer, Map<String, WorkTimeReport>> result  = new HashMap<>();
         List<CrewMember> crewList = schedule.getCrewMembers();
         List<Flight> flightList = schedule.getFlights();
-        if (flightList == null) {
-            throw new IllegalArgumentException("Flight list не должен быть null");
-        }
-        // !!! добавить проверку наличия crewIds из Flight в CrewMembers
 
-
-
-
-
-
-        // до сюда проверка
         //Map<monthYear, Map<numWeekInMonth, List<Flight>>>
         Map<Integer,Map<Integer, Map<Integer, List<Flight>>>> groupFlights = groupByMonthAndWeek(flightList);
         for (Map.Entry<Integer, Map<Integer, Map<Integer, List<Flight>>>> yearEntry : groupFlights.entrySet()) {

@@ -2,9 +2,11 @@ package org.coolCompany.writer;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
+import org.coolCompany.model.CrewMember;
 import org.coolCompany.service.WorkTimeReport;
 
 import java.io.File;
+import java.util.List;
 import java.util.Map;
 
 

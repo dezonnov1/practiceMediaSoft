@@ -12,13 +12,15 @@ import java.util.HashMap;
 import java.util.Map;
 
 @Test(enabled = false)
-public class JsonDataWriterTest {
+public class JsonDataWriterTest{
     private JsonDataWriter writer = new JsonDataWriter();
     private JsonDataParser parser = new JsonDataParser();
     private FlightSchedule schedule;
     private Map<Integer, Map<String, WorkTimeReport>> dataMap  = new HashMap<>();
     private File fileForParse = new File(JsonDataWriterTest.class.getResource("testData.json").toString());
     private File fileForWritter = new File(JsonDataWriterTest.class.getResource("testOut.json").toString());
+
+
     @BeforeMethod
     public void start() throws Exception {
         schedule = parser.parse(fileForParse);

@@ -1,7 +1,6 @@
 package org.coolCompany.service;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
-import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 
 public class WorkTimeReport {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "0.00")

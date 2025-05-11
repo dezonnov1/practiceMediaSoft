@@ -10,7 +10,7 @@ import java.io.File;
 import java.util.Map;
 
 @Test(enabled = false)
-public class WorkTimeCalculatorTest {
+public class WorkTimeCalculatorTest{
     JsonDataParser parser = new JsonDataParser();
     FlightSchedule schedule;
     String nameTastedFile = "testData.json";
@@ -23,7 +23,7 @@ public class WorkTimeCalculatorTest {
 
 
     @Test
-    public void testCalculateWorkTimeNotNull() {
+    public void testCalculateWorkTime() {
         Map<Integer, Map<String, WorkTimeReport>> result = WorkTimeCalculator.calculateWorkTime(schedule);
         for (Map.Entry<Integer, Map<String, WorkTimeReport>> Crews : result.entrySet()){
             for (Map.Entry<String, WorkTimeReport>report : Crews.getValue().entrySet()){

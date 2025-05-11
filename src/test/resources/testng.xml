@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="test" parallel = "false">
+    <test name="test model">
+        <classes>
+            <class name="org.coolCompany.model.CrewMemberTest"/>
+            <class name="org.coolCompany.model.FlightTest"/>
+        </classes>
+    </test>
+    <test name="factory test">
+        <classes>
+            <class name="org.coolCompany.factory.DataIOFactoryTest"/>
+        </classes>
+    </test>
+<!--    <test name="parser test">-->
+<!--        <classes>-->
+<!--            <class name="org.coolCompany.parser.JsonDataParserTest"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--    <test name="writter test">-->
+<!--        <classes>-->
+<!--            <class name="org.coolCompany.writer.JsonDataWriterTest"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--    <test name="service test">-->
+<!--        <classes>-->
+<!--            <class name="org.coolCompany.service.WorkTimeCalculatorTest"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--    <test name="app test">-->
+<!--        <classes>-->
+<!--            <class name="org.coolCompany.AppTest"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+</suite>

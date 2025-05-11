@@ -9,10 +9,13 @@ import java.util.Locale;
 
 public class AppConfig {
     public static final Locale APP_LOCALE = new Locale("ru", "RU");
-    public static final DateTimeFormatter DATE_TIME_FORMATTER = DateTimeFormatter.ofPattern("dd.MM.yyyy HH:mm", APP_LOCALE);
-    public static final DateTimeFormatter DATE_FORMATTER = DateTimeFormatter.ofPattern("dd.MM.yyyy", APP_LOCALE);
-    public static final DateTimeFormatter MONTH_YEAR_FORMATTER = DateTimeFormatter.ofPattern("MM.yyyy", APP_LOCALE);
-    public static final DateTimeFormatter TIME_FORMATTER = DateTimeFormatter.ofPattern("HH:mm", APP_LOCALE);
+    public static final String DATE_TIME_PATTERN = "dd.MM.yyyy HH:mm";
+    public static final String DATE_PATTERN = "dd.MM.yyyy";
+    public static final String TIME_PATTERN = "HH:mm XXX";
+    public static final DateTimeFormatter DATE_TIME_FORMATTER = DateTimeFormatter.ofPattern(DATE_TIME_PATTERN /*,APP_LOCALE*/);
+    public static final DateTimeFormatter DATE_FORMATTER = DateTimeFormatter.ofPattern(DATE_PATTERN /*,APP_LOCALE*/);
+    public static final DateTimeFormatter MONTH_YEAR_FORMATTER = DateTimeFormatter.ofPattern("MM.yyyy"/*, APP_LOCALE*/);
+    public static final DateTimeFormatter TIME_FORMATTER = DateTimeFormatter.ofPattern(TIME_PATTERN/*, APP_LOCALE*/);
     public static final WeekFields WEEK_FIELDS = WeekFields.of(APP_LOCALE);
 
     // java -Dmyapp.home=/opt/myapp -Dmyapp.output=/data/reports -jar app.jar
