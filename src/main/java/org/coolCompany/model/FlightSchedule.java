@@ -1,5 +1,6 @@
 package org.coolCompany.model;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
@@ -12,8 +13,10 @@ public class FlightSchedule {
     private List<CrewMember> crewMembers;
     @JsonProperty("Flights")
     private List<Flight> flights;
-
-    public FlightSchedule(List<CrewMember> crewMembers, List<Flight> flights) {
+    @JsonCreator
+    public FlightSchedule(
+            @JsonProperty("CrewMembers") List<CrewMember> crewMembers,
+            @JsonProperty("Flights") List<Flight> flights) {
         this.crewMembers = crewMembers;
         this.flights = flights;
     }
@@ -40,6 +43,14 @@ public class FlightSchedule {
         }
         return true;
     }
+
+    public static boolean isValidCrewMembers(List<CrewMember> crewMembers) {
+        if (crewMembers == null || crewMembers.isEmpty()) {
+            return false;
+        }
+        return crewMembers.stream().allMatch(CrewMember::isValid);
+    }
+
     public List<CrewMember> getCrewMembers() {
         return crewMembers;
     }

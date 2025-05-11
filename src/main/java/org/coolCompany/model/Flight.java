@@ -9,7 +9,6 @@ import java.time.LocalDateTime;
 import java.lang.String;
 import java.util.Objects;
 
-import static org.coolCompany.AppConfig.DATE_TIME_PATTERN;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Flight{
@@ -17,9 +16,9 @@ public class Flight{
     private String aircraftNumber; // номер воздушного судна
     private String departureAirport; // название аэропорта вылета
     private String arrivalAirport; // название аэропорта назначения
-    @JsonFormat(pattern = DATE_TIME_PATTERN, timezone = "UTC-10")
+    //@JsonFormat(pattern = DATE_TIME_PATTERN)
     private LocalDateTime departureTime; // время взлета
-    @JsonFormat(pattern = DATE_TIME_PATTERN, timezone = "UTC-10")
+    //@JsonFormat(pattern = DATE_TIME_PATTERN)
     private LocalDateTime arrivalTime; // время посадки
     @JsonProperty("crewIds")
     private List<Integer> crewIds; // список экипажа, выполнявшего перелет.
@@ -37,7 +36,6 @@ public class Flight{
         setArrivalAirport(arrivalAirport);
         setDepartureAndArrivalTime(departureTime,arrivalTime);
         setCrewIds(crewIds);
-        validateTimeRange(departureTime,arrivalTime);
     }
 
     public Flight() {
@@ -185,7 +183,6 @@ public class Flight{
         validateTimeRange(this.departureTime, arrivalTime);
         this.arrivalTime = arrivalTime;
     }
-
     public void setDepartureAndArrivalTime(LocalDateTime departureTime, LocalDateTime arrivalTime) throws IllegalArgumentException{
         validateTimeRange(departureTime, arrivalTime);
         this.departureTime = departureTime;

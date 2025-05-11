@@ -1,0 +1,171 @@
+{
+  "CrewMembers": [
+    {"id": 1, "firstName": "Валерий", "lastName": "Жмышенко"},
+    {"id": 2, "firstName": "Анна", "lastName": "Петрова"},
+    {"id": 3, "firstName": "Игорь", "lastName": "Сидоров"}
+  ],
+  "Flights": [
+    {
+      "aircraftType": "Дневная переработка",
+      "aircraftNumber": "RA-73030",
+      "departureAirport": "Оренбург-Центральный",
+      "arrivalAirport": "Якутск",
+      "departureTime": "06.01.2025 00:00",
+      "arrivalTime": "06.01.2025 09:00",
+      "crewIds": [1]
+    },
+    {
+      "aircraftType": "недельная переработка",
+      "aircraftNumber": "RA-73031",
+      "departureAirport": "Москва-Шереметьево",
+      "arrivalAirport": "Екатеринбург",
+      "departureTime": "07.01.2025 00:00",
+      "arrivalTime": "07.01.2025 08:00",
+      "crewIds": [1]
+    },
+    {
+      "aircraftType": "недельная переработка",
+      "aircraftNumber": "RA-73032",
+      "departureAirport": "Новосибирск",
+      "arrivalAirport": "Красноярск",
+      "departureTime": "03.02.2025 00:00",
+      "arrivalTime": "03.02.2025 08:00",
+      "crewIds": [2]
+    },
+    {
+      "aircraftType": "недельная переработка",
+      "aircraftNumber": "RA-73032",
+      "departureAirport": "Новосибирск",
+      "arrivalAirport": "Красноярск",
+      "departureTime": "04.02.2025 00:00",
+      "arrivalTime": "04.02.2025 08:00",
+      "crewIds": [2]
+    },
+    {
+      "aircraftType": "недельная переработка",
+      "aircraftNumber": "RA-73032",
+      "departureAirport": "Новосибирск",
+      "arrivalAirport": "Красноярск",
+      "departureTime": "05.02.2025 00:00",
+      "arrivalTime": "05.02.2025 08:00",
+      "crewIds": [2]
+    },
+    {
+      "aircraftType": "недельная переработка",
+      "aircraftNumber": "RA-73032",
+      "departureAirport": "Новосибирск",
+      "arrivalAirport": "Красноярск",
+      "departureTime": "06.02.2025 00:00",
+      "arrivalTime": "06.02.2025 08:00",
+      "crewIds": [2]
+    },
+    {
+      "aircraftType": "недельная переработка",
+      "aircraftNumber": "RA-73032",
+      "departureAirport": "Новосибирск",
+      "arrivalAirport": "Красноярск",
+      "departureTime": "07.02.2025 00:00",
+      "arrivalTime": "07.02.2025 08:00",
+      "crewIds": [2]
+    },
+    {
+      "aircraftType": "месячная переработка",
+      "aircraftNumber": "RA-73033",
+      "departureAirport": "Сочи",
+      "arrivalAirport": "Казань",
+      "departureTime": "02.03.2025 00:00",
+      "arrivalTime": "02.03.2025 08:00",
+      "crewIds": [3]
+    },
+    {
+      "aircraftType": "месячная переработка",
+      "aircraftNumber": "RA-73034",
+      "departureAirport": "Самара",
+      "arrivalAirport": "Владивосток",
+      "departureTime": "03.03.2025 00:00",
+      "arrivalTime": "03.03.2025 08:00",
+      "crewIds": [3]
+    },
+    {
+      "aircraftType": "месячная переработка",
+      "aircraftNumber": "RA-73035",
+      "departureAirport": "Иркутск",
+      "arrivalAirport": "Магадан",
+      "departureTime": "04.03.2025 00:00",
+      "arrivalTime": "04.03.2025 08:00",
+      "crewIds": [3]
+    },
+    {
+      "aircraftType": "месячная переработка",
+      "aircraftNumber": "RA-73036",
+      "departureAirport": "Уфа",
+      "arrivalAirport": "Омск",
+      "departureTime": "05.03.2025 00:00",
+      "arrivalTime": "05.03.2025 08:00",
+      "crewIds": [3]
+    },
+    {
+      "aircraftType": "месячная переработка",
+      "aircraftNumber": "RA-73037",
+      "departureAirport": "Архангельск",
+      "arrivalAirport": "Мурманск",
+      "departureTime": "06.03.2025 00:00",
+      "arrivalTime": "06.03.2025 08:00",
+      "crewIds": [3]
+    },
+    {
+      "aircraftType": "месячная переработка",
+      "aircraftNumber": "RA-73038",
+      "departureAirport": "Томск",
+      "arrivalAirport": "Петропавловск-Камчатский",
+      "departureTime": "10.03.2025 00:00",
+      "arrivalTime": "10.03.2025 08:00",
+      "crewIds": [3]
+    },
+    {
+      "aircraftType": "месячная переработка",
+      "aircraftNumber": "RA-73039",
+      "departureAirport": "Челябинск",
+      "arrivalAirport": "Анадырь",
+      "departureTime": "11.03.2025 00:00",
+      "arrivalTime": "11.03.2025 08:00",
+      "crewIds": [3]
+    },
+    {
+      "aircraftType": "месячная переработка",
+      "aircraftNumber": "RA-73039",
+      "departureAirport": "Челябинск",
+      "arrivalAirport": "Анадырь",
+      "departureTime": "12.03.2025 00:00",
+      "arrivalTime": "12.03.2025 08:00",
+      "crewIds": [3]
+    },
+    {
+      "aircraftType": "месячная переработка",
+      "aircraftNumber": "RA-73039",
+      "departureAirport": "Челябинск",
+      "arrivalAirport": "Анадырь",
+      "departureTime": "13.03.2025 00:00",
+      "arrivalTime": "13.03.2025 08:00",
+      "crewIds": [3]
+    },
+    {
+      "aircraftType": "месячная переработка",
+      "aircraftNumber": "RA-73039",
+      "departureAirport": "Челябинск",
+      "arrivalAirport": "Анадырь",
+      "departureTime": "14.03.2025 00:00",
+      "arrivalTime": "14.03.2025 08:00",
+      "crewIds": [3]
+    },
+    {
+      "aircraftType": "месячная переработка",
+      "aircraftNumber": "RA-73039",
+      "departureAirport": "Челябинск",
+      "arrivalAirport": "Анадырь",
+      "departureTime": "17.03.2025 00:00",
+      "arrivalTime": "17.03.2025 08:00",
+      "crewIds": [3]
+    }
+  ]
+}

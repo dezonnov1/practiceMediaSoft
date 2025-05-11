@@ -13,24 +13,19 @@
             <class name="org.coolCompany.factory.DataIOFactoryTest"/>
         </classes>
     </test>
-<!--    <test name="parser test">-->
-<!--        <classes>-->
-<!--            <class name="org.coolCompany.parser.JsonDataParserTest"/>-->
-<!--        </classes>-->
-<!--    </test>-->
-<!--    <test name="writter test">-->
-<!--        <classes>-->
-<!--            <class name="org.coolCompany.writer.JsonDataWriterTest"/>-->
-<!--        </classes>-->
-<!--    </test>-->
-<!--    <test name="service test">-->
-<!--        <classes>-->
-<!--            <class name="org.coolCompany.service.WorkTimeCalculatorTest"/>-->
-<!--        </classes>-->
-<!--    </test>-->
-<!--    <test name="app test">-->
-<!--        <classes>-->
-<!--            <class name="org.coolCompany.AppTest"/>-->
-<!--        </classes>-->
-<!--    </test>-->
+    <test name="parser test">
+        <classes>
+            <class name="org.coolCompany.parser.JsonDataParserTest"/>
+        </classes>
+    </test>
+    <test name="writter test">
+        <classes>
+            <class name="org.coolCompany.writer.JsonDataWriterTest"/>
+        </classes>
+    </test>
+    <test name="service test">
+        <classes>
+            <class name="org.coolCompany.service.WorkTimeCalculatorTest"/>
+        </classes>
+    </test>
 </suite>

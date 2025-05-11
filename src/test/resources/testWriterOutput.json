@@ -1,0 +1,202 @@
+{
+  "1" : {
+    "04.2026" : {
+      "totalHours" : 2.1666666666666665,
+      "exceedsMonthlyLimit" : false,
+      "exceedsWeeklyLimit" : false,
+      "exceedsDailyLimit" : false
+    },
+    "07.2026" : {
+      "totalHours" : 2.5,
+      "exceedsMonthlyLimit" : false,
+      "exceedsWeeklyLimit" : false,
+      "exceedsDailyLimit" : false
+    },
+    "12.2025" : {
+      "totalHours" : 2.0,
+      "exceedsMonthlyLimit" : false,
+      "exceedsWeeklyLimit" : false,
+      "exceedsDailyLimit" : false
+    }
+  },
+  "2" : {
+    "08.2026" : {
+      "totalHours" : 2.5,
+      "exceedsMonthlyLimit" : false,
+      "exceedsWeeklyLimit" : false,
+      "exceedsDailyLimit" : false
+    },
+    "04.2026" : {
+      "totalHours" : 2.1666666666666665,
+      "exceedsMonthlyLimit" : false,
+      "exceedsWeeklyLimit" : false,
+      "exceedsDailyLimit" : false
+    },
+    "12.2025" : {
+      "totalHours" : 2.0,
+      "exceedsMonthlyLimit" : false,
+      "exceedsWeeklyLimit" : false,
+      "exceedsDailyLimit" : false
+    }
+  },
+  "3" : {
+    "05.2026" : {
+      "totalHours" : 3.5,
+      "exceedsMonthlyLimit" : false,
+      "exceedsWeeklyLimit" : false,
+      "exceedsDailyLimit" : false
+    },
+    "08.2026" : {
+      "totalHours" : 2.5,
+      "exceedsMonthlyLimit" : false,
+      "exceedsWeeklyLimit" : false,
+      "exceedsDailyLimit" : false
+    },
+    "12.2025" : {
+      "totalHours" : 2.0,
+      "exceedsMonthlyLimit" : false,
+      "exceedsWeeklyLimit" : false,
+      "exceedsDailyLimit" : false
+    }
+  },
+  "4" : {
+    "02.2025" : {
+      "totalHours" : 3.5,
+      "exceedsMonthlyLimit" : false,
+      "exceedsWeeklyLimit" : false,
+      "exceedsDailyLimit" : false
+    },
+    "05.2026" : {
+      "totalHours" : 3.5,
+      "exceedsMonthlyLimit" : false,
+      "exceedsWeeklyLimit" : false,
+      "exceedsDailyLimit" : false
+    },
+    "08.2026" : {
+      "totalHours" : 2.5,
+      "exceedsMonthlyLimit" : false,
+      "exceedsWeeklyLimit" : false,
+      "exceedsDailyLimit" : false
+    }
+  },
+  "5" : {
+    "02.2025" : {
+      "totalHours" : 3.5,
+      "exceedsMonthlyLimit" : false,
+      "exceedsWeeklyLimit" : false,
+      "exceedsDailyLimit" : false
+    },
+    "05.2026" : {
+      "totalHours" : 3.5,
+      "exceedsMonthlyLimit" : false,
+      "exceedsWeeklyLimit" : false,
+      "exceedsDailyLimit" : false
+    },
+    "09.2026" : {
+      "totalHours" : 3.3333333333333335,
+      "exceedsMonthlyLimit" : false,
+      "exceedsWeeklyLimit" : false,
+      "exceedsDailyLimit" : false
+    }
+  },
+  "6" : {
+    "02.2025" : {
+      "totalHours" : 3.5,
+      "exceedsMonthlyLimit" : false,
+      "exceedsWeeklyLimit" : false,
+      "exceedsDailyLimit" : false
+    },
+    "09.2026" : {
+      "totalHours" : 3.3333333333333335,
+      "exceedsMonthlyLimit" : false,
+      "exceedsWeeklyLimit" : false,
+      "exceedsDailyLimit" : false
+    },
+    "06.2026" : {
+      "totalHours" : 4.5,
+      "exceedsMonthlyLimit" : false,
+      "exceedsWeeklyLimit" : false,
+      "exceedsDailyLimit" : false
+    }
+  },
+  "7" : {
+    "09.2026" : {
+      "totalHours" : 3.3333333333333335,
+      "exceedsMonthlyLimit" : false,
+      "exceedsWeeklyLimit" : false,
+      "exceedsDailyLimit" : false
+    },
+    "06.2026" : {
+      "totalHours" : 4.5,
+      "exceedsMonthlyLimit" : false,
+      "exceedsWeeklyLimit" : false,
+      "exceedsDailyLimit" : false
+    },
+    "03.2026" : {
+      "totalHours" : 2.5,
+      "exceedsMonthlyLimit" : false,
+      "exceedsWeeklyLimit" : false,
+      "exceedsDailyLimit" : false
+    }
+  },
+  "8" : {
+    "10.2026" : {
+      "totalHours" : 2.5,
+      "exceedsMonthlyLimit" : false,
+      "exceedsWeeklyLimit" : false,
+      "exceedsDailyLimit" : false
+    },
+    "06.2026" : {
+      "totalHours" : 4.5,
+      "exceedsMonthlyLimit" : false,
+      "exceedsWeeklyLimit" : false,
+      "exceedsDailyLimit" : false
+    },
+    "03.2026" : {
+      "totalHours" : 2.5,
+      "exceedsMonthlyLimit" : false,
+      "exceedsWeeklyLimit" : false,
+      "exceedsDailyLimit" : false
+    }
+  },
+  "9" : {
+    "10.2026" : {
+      "totalHours" : 2.5,
+      "exceedsMonthlyLimit" : false,
+      "exceedsWeeklyLimit" : false,
+      "exceedsDailyLimit" : false
+    },
+    "03.2026" : {
+      "totalHours" : 2.5,
+      "exceedsMonthlyLimit" : false,
+      "exceedsWeeklyLimit" : false,
+      "exceedsDailyLimit" : false
+    },
+    "07.2026" : {
+      "totalHours" : 2.5,
+      "exceedsMonthlyLimit" : false,
+      "exceedsWeeklyLimit" : false,
+      "exceedsDailyLimit" : false
+    }
+  },
+  "10" : {
+    "10.2026" : {
+      "totalHours" : 2.5,
+      "exceedsMonthlyLimit" : false,
+      "exceedsWeeklyLimit" : false,
+      "exceedsDailyLimit" : false
+    },
+    "04.2026" : {
+      "totalHours" : 2.1666666666666665,
+      "exceedsMonthlyLimit" : false,
+      "exceedsWeeklyLimit" : false,
+      "exceedsDailyLimit" : false
+    },
+    "07.2026" : {
+      "totalHours" : 2.5,
+      "exceedsMonthlyLimit" : false,
+      "exceedsWeeklyLimit" : false,
+      "exceedsDailyLimit" : false
+    }
+  }
+}

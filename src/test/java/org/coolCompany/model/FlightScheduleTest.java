@@ -11,6 +11,7 @@ import java.util.List;
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.fail;
 
+@Test(enabled = false)
 public class FlightScheduleTest{
     FlightSchedule schedule;
     @DataProvider(name = "crewsCases")

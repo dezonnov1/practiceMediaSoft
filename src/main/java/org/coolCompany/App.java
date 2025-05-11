@@ -50,14 +50,14 @@ public class App {
             DataParser parser = DataIOFactory.createParser(inputFileName);
 
 
-            FlightSchedule schedule = null;
+            FlightSchedule schedule;
             inputFile = new File(inputFileDir, inputFileName);
             if (inputFile.setReadable(true)){
                 schedule = parser.parse(inputFile);
                 System.out.println("Успешное чтение " + inputFile.getAbsolutePath());
             }
             else {
-                System.out.println("!!! Не удалось изменить атрибут для чтения");
+                throw new RuntimeException("!!! Не удалось изменить атрибут для чтения");
             }
 
 

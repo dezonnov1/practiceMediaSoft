@@ -1,6 +1,8 @@
 package org.coolCompany.model;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.util.Objects;
 
@@ -10,8 +12,10 @@ public class CrewMember {
     private Integer id = 0;
     private String firstName = ""; // имя специалиста
     private String lastName = ""; // фамилия специалиста
-
-    public CrewMember(Integer id, String firstName, String lastName) throws IllegalArgumentException{
+    @JsonCreator
+    public CrewMember(@JsonProperty("id")Integer id,
+                      @JsonProperty("firstName")String firstName,
+                      @JsonProperty("lastName")String lastName) throws IllegalArgumentException{
         setId(id);
         setFirstName(firstName);
         setLastName(lastName);
