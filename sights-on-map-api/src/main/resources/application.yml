@@ -1,0 +1,12 @@
+---
+  server:
+    address:
+    port: 8080
+  spring:
+    application:
+      name: sights-on-map-api
+    datasource:
+      url: jdbc:postgresql://localhost:5432/sights-on-map-api
+      username: postgres
+      password: postgres
+      driver-class-name: org.postgresql.Driver
