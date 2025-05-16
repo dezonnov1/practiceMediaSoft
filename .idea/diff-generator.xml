@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DiffGenerationConfig">
+    <option name="snapshotDb" value="false" />
+    <option name="snapshotDirValue" value="$PROJECT_DIR$/sights-on-map-api/src/main/resources/db" />
+    <option name="snapshotModelValue" value="sights-on-map-api:entityManagerFactory" />
+    <option name="sourceModelValue" value="sights-on-map-api:entityManagerFactory" />
+    <option name="targetDbValue" value="38336668-b640-4a08-be11-bc16c10ce937" />
+  </component>
+</project>
