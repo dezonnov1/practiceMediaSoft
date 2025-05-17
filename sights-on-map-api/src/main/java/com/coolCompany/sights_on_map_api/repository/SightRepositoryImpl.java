@@ -75,4 +75,31 @@ public class SightRepositoryImpl implements SightRepositoryCustom {
 
         return query.getResultList();
     }
+
+    @Override
+    public List<SightEntity> findByNameFiltered(String name, String category, Double minAverageRating) {
+        StringBuilder sql = new StringBuilder("""
+                SELECT s.* FROM sight s
+                LEFT JOIN (
+                    SELECT sight_id, AVG(estimation) as avg_rating
+                    FROM feedback
+                    GROUP BY sight_id
+                ) f ON s.id = f.sight_id
+                WHERE lower(s.name) = lower(:name)
+            """);
+
+        if (category != null) {
+            sql.append(" AND s.category = :category");
+        }
+        if (minAverageRating != null) {
+            sql.append(" AND (f.avg_rating IS NOT NULL AND f.avg_rating >= :minRating)");
+        }
+
+        Query query = entityManager.createNativeQuery(sql.toString(), SightEntity.class);
+        query.setParameter("name", name);
+        if (category != null) query.setParameter("category", category);
+        if (minAverageRating != null) query.setParameter("minRating", minAverageRating);
+
+        return query.getResultList();
+    }
 }

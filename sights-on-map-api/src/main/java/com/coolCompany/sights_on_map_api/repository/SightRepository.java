@@ -10,4 +10,6 @@ import java.util.Optional;
 public interface SightRepository extends JpaRepository<SightEntity, Long>, SightRepositoryCustom {
     Optional<SightEntity> findByNameIgnoreCase(String name);
     List<SightEntity> findByCityIgnoreCase(String city);
+    Optional<SightEntity> findByName(String name);
+
 }

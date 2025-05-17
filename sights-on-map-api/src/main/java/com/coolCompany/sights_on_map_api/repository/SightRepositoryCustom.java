@@ -9,4 +9,6 @@ public interface SightRepositoryCustom {
                                        String category, Double minAverageRating, int limit);
 
     List<SightEntity> findSightsByCity(String city, String category, Double minAverageRating);
+
+    List<SightEntity> findByNameFiltered(String name, String category, Double minAverageRating);
 }
