@@ -18,7 +18,7 @@ import java.util.stream.Collectors;
 @RestController
 @RequestMapping("/api/feedback")
 @RequiredArgsConstructor
-class FeedbackController {
+public class FeedbackController {
 
     private final FeedbackRepository feedbackRepository;
     private final SightRepository sightRepository;
@@ -112,6 +112,4 @@ class FeedbackController {
         feedbackRepository.deleteById(id);
         return ResponseEntity.ok().build();
     }
-
-
 }
